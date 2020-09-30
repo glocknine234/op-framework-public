@@ -942,10 +942,32 @@ OP.Global.Locales.Languages["et-EE"] = {
 		locked_press_to_unlock = "[${InteractionKey}] Lukus",
 		unlocked_press_to_lock = "[${InteractionKey}] Lahti",
 		locking = "Lukustamine",
-		unlocking = "Ära vahi seda ust!",
+		unlocking = "Lukustub!",
 		jewelry_store_closed = "Pood kinni, Mine ära siit nüüd!.",
-		bank_closed = "Mine röövi muud panka röövel!",
+		bank_closed = "Panga uksed on kinni!",
 		store_closed = "Pood on kinni, Ei näe wä!?"
+	},
+	
+	health = {
+		successfully_revived_player = "Õnnestus reviveda mängija ${consoleName}.",
+		successfully_revived_player_removed_injuries = "Õnnestus reviveda mängija ${consoleName} ja eemaldatud mängija vigastused.",
+		successfully_revived_everyone = "Õnnestus kõik serveri mängijad reviveda.",
+		successfully_revived_everyone_removed_injuries = "Õnnestus kõigi serveri mängijate vigastused eemaldada ja reviveda.",
+		failed_to_revive = "Command /revive ebaõnnestus.",
+		revive_player_not_staff = "Mängija üritas teist mängijat reviveda kuid polnud selle jaoks vastavaid õiguseid.",
+		revive_self_not_staff = "Mängija üritas ennast reviveda kuid polnud selle jaoks vastavaid õiguseid.",
+		revived_self_removed_injuries_title = "Revived ja vigastused eemaldatud",
+		revived_self_removed_injuries_details = "${consoleName} revives ennast ja eemaldas oma vigastused.",
+		revived_self_title = "Enda revivimine",
+		revived_self_details = "${consoleName} revives ennast.",
+		revived_everyone_removed_injuries_title = "Revivisid kõik mängijad ja eemaldasid nende vigastused.",
+		revived_everyone_removed_injuries_details = "${consoleName} revives kõik mängijad ja eemaldas nende vigastused.",
+		revived_everyone_title = "Revivisid kõik",
+		revived_everyone_details = "${consoleName} revivis kõik mängijad.",
+		revived_player_removed_injuries_title = "Revivisid mängija ja eemaldasid tema vigastused.",
+		revived_player_removed_injuries_details = "${consoleName} revivis ${targetConsoleName} ja eemaldas tema vigastused.",
+		revived_player_title = "Revivis mängijat",
+		revived_player_details = "${consoleName} revivis ${targetConsoleName}.",
 	},
 
 	hud = {
@@ -1701,8 +1723,8 @@ OP.Global.Locales.Languages["et-EE"] = {
 	},
 
 	security_cameras = {
-		illegal_security_camera = "Kaamera hävitamine",
-		offline = "Offline",
+		illegal_security_camera = "Illegaalne kaamera",
+		offline = "Väljas",
 		camera_list = "Camera List",
 		camera = "Camera ${cameraId}",
 		mrpd = "Mission Row PD",
@@ -1743,16 +1765,16 @@ OP.Global.Locales.Languages["et-EE"] = {
 	},
 
 	shooting_ranges = {
-		turn_on = "Turn On ($${cost})",
-		turn_off = "Turn Off",
-		toggle_through_targets = "Toggle Through Targets (${modelId})",
-		increase_speed = "Increase Speed (${speedLevel})",
-		decrease_speed = "Decrease Speed (${speedLevel})",
-		increase_rotation = "Increase Rotation (${rotationLevel})",
-		decrease_rotation = "Decrease Rotation (${rotationLevel})",
-		clear_bullet_impacts = "Clear Bullet Impacts",
-		illegal_shooting_spot_value = "Attempting to parse invalid values for shootings spots.",
-		illegal_shooting_spot_id = "Attempting to parse values for a shootings spot that doesn't exist.",
+		turn_on = "Alusta ($${cost})",
+		turn_off = "Lõpeta",
+		toggle_through_targets = "Vali märklaud (${modelId})",
+		increase_speed = "Tõsta kiirust (${speedLevel})",
+		decrease_speed = "Võta kiirust maha (${speedLevel})",
+		increase_rotation = "Tõsta keerlemiskiirust (${rotationLevel})",
+		decrease_rotation = "Võta keerlemiskiirust maha (${rotationLevel})",
+		clear_bullet_impacts = "Puhasta märklaud ära",
+		illegal_shooting_spot_value = "Kehtetu.",
+		illegal_shooting_spot_id = "Seda märklauda ei eksisteeri..",
 		not_enough_cash = "Pole piisavalt raha."
 	},
 
@@ -1799,10 +1821,21 @@ OP.Global.Locales.Languages["et-EE"] = {
 	},
 
 	status = {
-		status_reset = "Successfully reset the status for ${consoleName}.",
-		status_reset_failed = "No user with server ID `${serverId}` was found.",
-		reset_status_not_staff = "Attempted to reset a player's status without required permissions.",
-		status_reset_for_all = "Successfully reset the status for everyone."
+		status_reset = "Resetisid mängija ${consoleName} kuulivesti leveli.",
+		status_reset_failed = "Ei leidnud mängijat ID-ga `${serverId}`",
+		reset_status_not_staff = "Üritasid mängija staatust resetida ilma õigusteta.",
+		status_reset_for_all = "Õnnestus resetida kõikide mängijate staatus.",
+		failed_to_set_body_armor_level = "Ebaõnnestus command /set_body_armor.",
+		set_body_armor_level_player = "Õnnestus määrata kuulivest mängijale ${consoleName} kuulivest: `${bodyArmorLevel}`.",
+		set_body_armor_level_everyone = "Panid kõigile mängijatele kuulivesti: `${bodyArmorLevel}`.",
+		set_body_armor_level_self_title = "Lisa endale kuulivest.",
+		set_body_armor_level_self_details = "${consoleName} lisas enda kuulivesti levelile: `${bodyArmorLevel}`.",
+		set_body_armor_level_everyone_title = "Pane kuulivesti level kõigile",
+		set_body_armor_level_everyone_details = "${consoleName} pani kõigi kuulivesti leveli: `${bodyArmorLevel}`.",
+		set_body_armor_level_player_title = "Määra kuulivesti level mängijale",
+		set_body_armor_level_player_details = "${consoleName} määras mängijale ${targetConsoleName} kuulivesti leveliga: `${bodyArmorLevel}`.",
+		set_body_armor_level_player_not_staff = "Mängija üritas lisada teisele mängijale kuulivesti aga polnud selleks vastavaid õiguseid.",
+		set_body_armor_level_self_not_staff = "Mängija üritas lisada endale kuulivesti aga polnud selleks vastavaid õiguseid."
 	},
 
 	sync = {
